@@ -11,7 +11,7 @@ module Module
   def objc_define_method(name, *types, &block)
     return_type, *parameter_types = Konjure::encode_objc_types(types)
     return_type ||= '@'
-    parameter_types.join('')
+    parameter_types = parameter_types.join('')
 
     signature = "#{return_type}@:#{parameter_types}"
     class_replaceMethod(self, name.to_sym, block, signature.UTF8String)
