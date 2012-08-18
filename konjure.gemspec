@@ -2,7 +2,7 @@
 require File.expand_path('../lib/konjure/version', __FILE__)
 
 Gem::Specification.new do |gem|
-  gem.name          = 'konjure'
+  gem.name          = 'konjure-bundler-fix'
   gem.description   = 'Konjure endows RubyMotion with greater metaprogramming capabilites'
   gem.homepage      = "https://github.com/kastiglione/#{gem.name}"
   gem.version       = Konjure::VERSION
@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split($\)
   gem.require_paths = ['lib']
 
-  gem.add_dependency 'motion-objc-runtime'
+  gem.add_dependency 'motion-objc-runtime-bundler-fix'
 
   gem.summary       = <<-END.gsub(/^ +/, '')
     Konjure provides improved metaprogramming facilities to
