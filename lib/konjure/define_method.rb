@@ -6,7 +6,7 @@ end
 
 module Module
   def define_method(name, &block)
-    if block.arity == 1 && !name.end_with?(':')
+    if block.arity > 0 && !name.end_with?(':')
       name += ':'
     end
 
