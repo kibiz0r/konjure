@@ -1,93 +1,56 @@
-module Module
-
-  # Overwrite the existing useless implementation
-  def define_method(name, &block)
-    objc_define_method(name, :object, Konjure::objc_parameter_types(block), &block)
+module Konjure
+  def self.generated_trampolines
+    @generated_trampolines ||= []
   end
-
-  def objc_define_method(name, return_type = :object, *parameter_types, &block)
-    raise ArgumentError, 'Block required' if block.nil?
-
-    signature = Konjure::objc_signature(return_type, parameter_types)
-    implementation = Konjure::method_implementation(block)
-    implementation.retain # prevent RubyMotion from collecting the proc
-    class_replaceMethod(self, name.to_sym, implementation, signature.UTF8String)
-    implementation
-  end
-
 end
 
-module Konjure
+module Module
+  def define_method(name, &block)
+    if block.arity == 1 && !name.end_with?(':')
+      name += ':'
+    end
 
-  def self.objc_signature(*types)
-    return_type, *parameter_types = types.flatten.map { |type|
-      TYPE_SHORTCUTS[type] || type
-    }
-    return_type ||= '@'
-    parameter_types = parameter_types.join('')
+    # @ Object return value
+    # @ Objective-C self
+    # : Objective-C SEL
+    # @ Ruby self (_self here)
+    # ... Ruby args
+    sig = '@@:'
+    # I'm not sure why, but the sig shouldn't specify the @ for _self for 0-arg methods even though _self still gets passed in
+    sig += '@' * block.arity if block.arity > 0
+    sig = sig.UTF8String
 
-    "#{return_type}@:#{parameter_types}"
-  end
-
-  def self.objc_parameter_types(block)
-    [:object] * block.arity.abs
-  end
-
-  def self.method_implementation(block)
     case block.arity
     when 0
-      lambda { |_self, cmd| _self.instance_exec(&block) }
+      lambda { |_self|              _self.instance_exec &block              }
     when 1
-      lambda { |_self, cmd, a| _self.instance_exec(a, &block) }
-    when -1
-      lambda { |_self, cmd, *a| _self.instance_exec(*a, &block) }
+      lambda { |_self, a|           _self.instance_exec a, &block           }
     when 2
-      lambda { |_self, cmd, a,b| _self.instance_exec(a,b, &block) }
-    when -2
-      lambda { |_self, cmd, a,*b| _self.instance_exec(a,*b, &block) }
+      lambda { |_self, a, b|        _self.instance_exec a, b, &block        }
     when 3
-      lambda { |_self, cmd, a,b,c| _self.instance_exec(a,b,c, &block) }
-    when -3
-      lambda { |_self, cmd, a,b,*c| _self.instance_exec(a,b,*c, &block) }
+      lambda { |_self, a, b, c|     _self.instance_exec a, b, c, &block     }
     when 4
-      lambda { |_self, cmd, a,b,c,d| _self.instance_exec(a,b,c,d, &block) }
-    when -4
-      lambda { |_self, cmd, a,b,c,*d| _self.instance_exec(a,b,c,*d, &block) }
-    when 5
-      lambda { |_self, cmd, a,b,c,d,e| _self.instance_exec(a,b,c,d,e, &block) }
-    when -5
-      lambda { |_self, cmd, a,b,c,d,*e| _self.instance_exec(a,b,c,d,*e, &block) }
-    when 6
-      lambda { |_self, cmd, a,b,c,d,e,f| _self.instance_exec(a,b,c,d,e,f, &block) }
-    when -6
-      lambda { |_self, cmd, a,b,c,d,e,*f| _self.instance_exec(a,b,c,d,e,*f, &block) }
+      lambda { |_self, a, b, c, d|  _self.instance_exec a, b, c, d, &block  }
     else
-      raise ArgumentError, 'define_method is limited to methods with 0..6 parameters'
+      raise 'hell'
+    end.tap do |trampoline|
+      Konjure.generated_trampolines << trampoline # retain a reference
+
+      case block.arity
+      when 0
+        konjure_replaceMethod0 self, name, trampoline, sig
+      when 1
+        konjure_replaceMethod1 self, name, trampoline, sig
+      when 2
+        konjure_replaceMethod2 self, name, trampoline, sig
+      when 3
+        konjure_replaceMethod3 self, name, trampoline, sig
+      when 4
+        konjure_replaceMethod4 self, name, trampoline, sig
+      else
+        raise 'hell'
+      end
     end
   end
-
-  TYPE_SHORTCUTS = {
-    bool:       'B',
-    boolean:    'B',
-    char:       'c',
-    class:      '#',
-    double:     'd',
-    float:      'f',
-    id:         '@',
-    int:        'i',
-    long:       'l',
-    long_long:  'q',
-    object:     '@',
-    pointer:    '^',
-    sel:        ':',
-    selector:   ':',
-    short:      's',
-    string:     '*',
-    uchar:      'C',
-    uint:       'I',
-    ulong:      'L',
-    ulong_long: 'Q',
-    ushort:     'S',
-  }
-
 end
+

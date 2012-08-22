@@ -1,0 +1,455 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		894297B915E41B2E002E27D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894297B815E41B2E002E27D5 /* Foundation.framework */; };
+		894297BF15E41B2E002E27D5 /* Konjure.m in Sources */ = {isa = PBXBuildFile; fileRef = 894297BE15E41B2E002E27D5 /* Konjure.m */; };
+		894297CB15E41B70002E27D5 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 894297CA15E41B70002E27D5 /* CoreFoundation.framework */; };
+		894297D115E41B70002E27D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 894297CF15E41B70002E27D5 /* InfoPlist.strings */; };
+		894297DA15E42259002E27D5 /* Konjure.h in Headers */ = {isa = PBXBuildFile; fileRef = 894297BD15E41B2E002E27D5 /* Konjure.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		894297DC15E422C7002E27D5 /* Konjure.h in Headers */ = {isa = PBXBuildFile; fileRef = 894297BD15E41B2E002E27D5 /* Konjure.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		894297D715E42180002E27D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 894297AC15E41B2E002E27D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 894297B415E41B2E002E27D5;
+			remoteInfo = "iOS Library";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		894297B515E41B2E002E27D5 /* libKonjure.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKonjure.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		894297B815E41B2E002E27D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		894297BC15E41B2E002E27D5 /* Konjure-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Konjure-Prefix.pch"; sourceTree = "<group>"; };
+		894297BD15E41B2E002E27D5 /* Konjure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Konjure.h; sourceTree = "<group>"; };
+		894297BE15E41B2E002E27D5 /* Konjure.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Konjure.m; sourceTree = "<group>"; };
+		894297C915E41B70002E27D5 /* Konjure.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Konjure.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		894297CA15E41B70002E27D5 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		894297CE15E41B70002E27D5 /* Konjure-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Konjure-Info.plist"; sourceTree = "<group>"; };
+		894297D015E41B70002E27D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		894297D215E41B70002E27D5 /* Konjure-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Konjure-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		894297B215E41B2E002E27D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				894297B915E41B2E002E27D5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		894297C615E41B70002E27D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				894297CB15E41B70002E27D5 /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		894297AA15E41B2E002E27D5 = {
+			isa = PBXGroup;
+			children = (
+				894297BA15E41B2E002E27D5 /* Konjure */,
+				894297CC15E41B70002E27D5 /* Konjure */,
+				894297B715E41B2E002E27D5 /* Frameworks */,
+				894297B615E41B2E002E27D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		894297B615E41B2E002E27D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				894297B515E41B2E002E27D5 /* libKonjure.a */,
+				894297C915E41B70002E27D5 /* Konjure.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		894297B715E41B2E002E27D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				894297B815E41B2E002E27D5 /* Foundation.framework */,
+				894297CA15E41B70002E27D5 /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		894297BA15E41B2E002E27D5 /* Konjure */ = {
+			isa = PBXGroup;
+			children = (
+				894297BD15E41B2E002E27D5 /* Konjure.h */,
+				894297BE15E41B2E002E27D5 /* Konjure.m */,
+				894297BB15E41B2E002E27D5 /* Supporting Files */,
+			);
+			path = Konjure;
+			sourceTree = "<group>";
+		};
+		894297BB15E41B2E002E27D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				894297BC15E41B2E002E27D5 /* Konjure-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		894297CC15E41B70002E27D5 /* Konjure */ = {
+			isa = PBXGroup;
+			children = (
+				894297CD15E41B70002E27D5 /* Supporting Files */,
+			);
+			path = Konjure;
+			sourceTree = "<group>";
+		};
+		894297CD15E41B70002E27D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				894297CE15E41B70002E27D5 /* Konjure-Info.plist */,
+				894297CF15E41B70002E27D5 /* InfoPlist.strings */,
+				894297D215E41B70002E27D5 /* Konjure-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		894297B315E41B2E002E27D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				894297DC15E422C7002E27D5 /* Konjure.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		894297D915E42241002E27D5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				894297DA15E42259002E27D5 /* Konjure.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		894297B415E41B2E002E27D5 /* iOS Library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 894297C215E41B2E002E27D5 /* Build configuration list for PBXNativeTarget "iOS Library" */;
+			buildPhases = (
+				894297B115E41B2E002E27D5 /* Sources */,
+				894297B215E41B2E002E27D5 /* Frameworks */,
+				894297B315E41B2E002E27D5 /* Headers */,
+				894297D615E41B8E002E27D5 /* Build Fat Library */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS Library";
+			productName = Konjure;
+			productReference = 894297B515E41B2E002E27D5 /* libKonjure.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		894297C815E41B70002E27D5 /* iOS Framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 894297D315E41B70002E27D5 /* Build configuration list for PBXNativeTarget "iOS Framework" */;
+			buildPhases = (
+				894297C515E41B70002E27D5 /* Sources */,
+				894297C615E41B70002E27D5 /* Frameworks */,
+				894297C715E41B70002E27D5 /* Resources */,
+				894297D915E42241002E27D5 /* Headers */,
+				894297DB15E42288002E27D5 /* Copy Library */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				894297D815E42180002E27D5 /* PBXTargetDependency */,
+			);
+			name = "iOS Framework";
+			productName = Konjure;
+			productReference = 894297C915E41B70002E27D5 /* Konjure.framework */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		894297AC15E41B2E002E27D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 894297AF15E41B2E002E27D5 /* Build configuration list for PBXProject "Konjure" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 894297AA15E41B2E002E27D5;
+			productRefGroup = 894297B615E41B2E002E27D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				894297C815E41B70002E27D5 /* iOS Framework */,
+				894297B415E41B2E002E27D5 /* iOS Library */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		894297C715E41B70002E27D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				894297D115E41B70002E27D5 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		894297D615E41B8E002E27D5 /* Build Fat Library */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Source/BuildFatLibrary.sh",
+			);
+			name = "Build Fat Library";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "source \"$SCRIPT_INPUT_FILE_0\"";
+			showEnvVarsInLog = 0;
+		};
+		894297DB15E42288002E27D5 /* Copy Library */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Library";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "CREATING_UNIVERSAL_DIR=${SYMROOT}/${CONFIGURATION}-${PRODUCT_NAME}-ios-universal\ncp \"${CREATING_UNIVERSAL_DIR}/lib${PRODUCT_NAME}.a\" \"${CONFIGURATION_BUILD_DIR}/${EXECUTABLE_PATH}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		894297B115E41B2E002E27D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				894297BF15E41B2E002E27D5 /* Konjure.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		894297C515E41B70002E27D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		894297D815E42180002E27D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 894297B415E41B2E002E27D5 /* iOS Library */;
+			targetProxy = 894297D715E42180002E27D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		894297CF15E41B70002E27D5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				894297D015E41B70002E27D5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		894297C015E41B2E002E27D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		894297C115E41B2E002E27D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		894297C315E41B2E002E27D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					armv6,
+					armv7,
+				);
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DSTROOT = /tmp/Konjure.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		894297C415E41B2E002E27D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					armv6,
+					armv7,
+				);
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DSTROOT = /tmp/Konjure.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		894297D415E41B70002E27D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "Konjure/Konjure-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = NO;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		894297D515E41B70002E27D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "Konjure/Konjure-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = NO;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		894297AF15E41B2E002E27D5 /* Build configuration list for PBXProject "Konjure" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				894297C015E41B2E002E27D5 /* Debug */,
+				894297C115E41B2E002E27D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		894297C215E41B2E002E27D5 /* Build configuration list for PBXNativeTarget "iOS Library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				894297C315E41B2E002E27D5 /* Debug */,
+				894297C415E41B2E002E27D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		894297D315E41B70002E27D5 /* Build configuration list for PBXNativeTarget "iOS Framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				894297D415E41B70002E27D5 /* Debug */,
+				894297D515E41B70002E27D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 894297AC15E41B2E002E27D5 /* Project object */;
+}

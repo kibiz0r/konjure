@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'Konjure' target in the 'Konjure' project
+//
+
+#ifdef __OBJC__
+  #import <Cocoa/Cocoa.h>
+#endif
